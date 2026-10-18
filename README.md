@@ -98,6 +98,33 @@ flowchart TD
 
 ---
 
+## Building From Source (When No Pre-built Artifacts Exist)
+
+### 1. Preparing the Backend Runtime
+
+The backend consists of Python modules and a FastAPI server (server.py). It does not require a compilation step, but packaging requires installing library dependencies:
+
+```bash
+cd backend
+python -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+### 2. Bundling the Frontend for Production
+
+For the frontend, Vite handles building static HTML/JS/CSS production bundles into the dist/ folder. If no production build exists, generate it by running:
+
+```bash
+cd frontend
+npm install
+npm run build
+```
+This compiles the JSX/Tailwind components into optimized static files inside frontend/dist/
+
+---
+
 ## Quick Start
 
 ### 1. Launch with Single Command
