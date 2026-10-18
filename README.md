@@ -163,3 +163,17 @@ Build the production frontend bundle:
 cd frontend
 npm run build
 ```
+
+---
+
+## TODO
+
+- Persist signals in a database, so that they can be saved and loaded.
+- Add query capabilities in the frontend, to be able to query signals of specific attributes.
+- Add a map to display the position of a signal.
+- Add views to help the user understand the signals better, e.g. histogram, signal details, etc.
+- Support multiple inputs (i.e. from different devices) at the same time and display signals properly.
+- Enhance spectrum capabilities, to be able to zoom, select smaller sections, drag left/right, etc.
+- Add capabilities of reacting on signals of specific attributes. Specify a particular action to happen when signal of interest is received.
+- Investigate and improve performance when high load of data is received.
+- Create end-to-end tests for different scenarios.
